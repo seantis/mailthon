@@ -10,8 +10,12 @@
 
 import sys
 import mimetypes
-from collections import MutableMapping
 from email.utils import formataddr
+
+try:
+    from collections.abc import MutableMapping
+except ImportError:
+    from collections import MutableMapping
 
 
 if sys.version_info[0] == 3:
